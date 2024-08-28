@@ -12,4 +12,4 @@ class App:
         transcription = ''.join(segment.text for segment in segments)
     
         # Send the data to Wuz
-        requests.post('http://localhost:3000/api/message', json={ 'message': transcription })
+        requests.post('http://localhost:3000/api/v1/prompt', json={ 'message': transcription })
